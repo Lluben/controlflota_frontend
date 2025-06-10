@@ -23,7 +23,7 @@ const ProductoLista = () => {
       <h1 className="title">Productos</h1>
       <h2 className="subtitle">Lista de Productos</h2>
       <Link to="/productos/add" className="button is-primary mb-2">
-        Crear producto
+        Crear productoX
       </Link>
       <table className="table is-striped is-fullwidth">
         <thead>
