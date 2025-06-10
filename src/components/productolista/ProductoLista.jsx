@@ -38,19 +38,19 @@ const ProductoLista = () => {
         <tbody>
         {productos.map((product, index) => (
             <tr key={index}>
-              <td>{product.id}</td>
+              <td>{product.productoId}</td>
               <td>{product.Nombre}</td>
               <td>{product.Precio}</td>
               <td>{product.empresa.Nombre}</td>
               <td>
                 <Link
-                  to={`/productos/edit/${product.id}`}
+                  to={`/productos/edit/${product.productoId}`}
                   className="button is-small is-info"
                 >
                   Editar
                 </Link>
                 <button
-                  onClick={() => deleteProducto(product.id)}
+                  onClick={() => deleteProducto(product.productoId)}
                   className="button is-small is-danger"
                 >
                   Eliminar
