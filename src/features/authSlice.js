@@ -9,10 +9,17 @@ const initialState = {
     message: ""
 }
 
+let axiosConfig = {
+    headers: {
+        'Content-Type': 'application/json;charset=UTF-8',
+        "Access-Control-Allow-Origin": "*",
+    }
+};
+
 export const LoginUser = createAsyncThunk("user/LoginUser", async(user, thunkAPI) => {
     console.log(user);
     try {
-        const response = await axios.post('http://54.160.158.246:5000/api/auth/login', {
+        const response = await axios.post('http://54.160.158.246/api/auth/login', {
             Email: user.email,
             Password: user.password
         });
@@ -27,7 +34,7 @@ export const LoginUser = createAsyncThunk("user/LoginUser", async(user, thunkAPI
 
 export const getMe = createAsyncThunk("user/getMe", async(_, thunkAPI) => {
     try {
-        const response = await axios.get('http://54.160.158.246:5000/api/auth/me');
+        const response = await axios.get('http://54.160.158.246/api/auth/me');
         return response.data;
     } catch (error) {
         if(error.response){
@@ -38,7 +45,7 @@ export const getMe = createAsyncThunk("user/getMe", async(_, thunkAPI) => {
 });
 
 export const LogOut = createAsyncThunk("user/LogOut", async() => {
-    await axios.delete('http://54.160.158.246:5000/api/auth/logout');
+    await axios.delete('http://54.160.158.246/api/auth/logout');
 });
 
 export const authSlice = createSlice({

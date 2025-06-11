@@ -10,7 +10,8 @@ const ProductoLista = () => {
   }, []);
 
   const getProductos = async () => {
-    const response = await axios.get('http://localhost:5000/api/productos');
+    //const response = await axios.get('http://localhost:5000/api/productos');
+    const response = await axios.get('http://54.160.158.246/api/productos');
     setProductos(response.data);
   };
 
