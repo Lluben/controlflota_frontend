@@ -9,7 +9,7 @@ const VentaLista = () => {
   }, []);
 
   const getVentas = async () => {
-    const response = await axios.get('http://localhost:5000/api/ventas');
+    const response = await axios.get('http://54.160.158.246/api/ventas');
     setVentas(response.data);
   };
 
