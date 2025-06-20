@@ -40,7 +40,7 @@ const FormAddProducto = () => {
                     type="text"
                     className="input"
                     value={nombre}
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={(e) => setNombre(e.target.value)}
                     placeholder="Product Name"
                   />
                 </div>
@@ -52,7 +52,7 @@ const FormAddProducto = () => {
                     type="text"
                     className="input"
                     value={precio}
-                    onChange={(e) => setPrice(e.target.value)}
+                    onChange={(e) => setPrecio(e.target.value)}
                     placeholder="Price"
                   />
                 </div>
