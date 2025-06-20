@@ -7,9 +7,10 @@ import Users from "./pages/users/Users";
 import Ventas from "./pages/ventas/Ventas";
 /*import AddUser from "./pages/AddUser";
 import EditUser from "./pages/EditUser";
-import AddProduct from "./pages/AddProduct";
-import EditProduct from "./pages/EditProduct";
- */
+*/
+import AddProducto from "./pages/productos/AddProducto";
+//import EditProduct from "./pages/EditProduct";
+
 function App() {
   return (
     <div>
@@ -19,6 +20,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/users" element={<Users />} />
           <Route path="/productos" element={<Productos />} />
+          <Route path="/productos/add" element={<AddProducto />} />
           <Route path="/ventas" element={<Ventas />} />
         </Routes>
       </BrowserRouter>
