@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Layout from "./Layout";
+import Layout from "../layout/Layout";
 import FormAddProducto from "../components/FormAddProducto";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
