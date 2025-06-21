@@ -7,7 +7,7 @@ const Welcome = () => {
     <div>
       <h1 className="title">Dashboard</h1>
       <h2 className="subtitle">
-      Bienvenido de nuevo <strong>{user && user.Nombre}</strong>
+      Bienvenido de nuevo <strong>{user && user.token}</strong>
     </h2>
     </div>
   );
