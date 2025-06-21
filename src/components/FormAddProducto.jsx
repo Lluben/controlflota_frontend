@@ -13,6 +13,7 @@ const FormAddProducto = () => {
   const saveProduct = async (e) => {
     e.preventDefault();
     const token = user.token;
+    console.log(token);
     try {
       await axios.post("http://54.160.158.246/api/productos", {
         Nombre: nombre,
