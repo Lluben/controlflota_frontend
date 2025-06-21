@@ -9,12 +9,12 @@ const initialState = {
     message: ""
 }
 
-let axiosConfig = {
+/*let axiosConfig = {
     headers: {
         'Content-Type': 'application/json;charset=UTF-8',
         "Access-Control-Allow-Origin": "*",
     }
-};
+};*/
 
 export const LoginUser = createAsyncThunk("user/LoginUser", async(user, thunkAPI) => {
     console.log(user);

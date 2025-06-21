@@ -10,12 +10,18 @@ const FormAddProducto = () => {
 
   const saveProduct = async (e) => {
     e.preventDefault();
+    const token = 'xhsgsrdjskpke';
     try {
       await axios.post("http://54.160.158.246/api/productos", {
         Nombre: nombre,
         Precio: precio,
         empresaId: 1,
-      });
+      },{ 
+      headers: {
+        'x-token': `${token}`
+      } 
+    });
+      //para navegar a /productos para mostrar todos los productos si la creación del producto es exitoso 
       navigate("/productos");
     } catch (error) {
       if (error.response) {
