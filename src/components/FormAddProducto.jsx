@@ -37,7 +37,7 @@ const FormAddProducto = () => {
   return (
     <div>
       <h1 className="title">Products</h1>
-      <h2 className="subtitle">Add New Product</h2>
+      <h2 className="subtitle">Adicionar un nuevo producto</h2>
       <div className="card is-shadowless">
         <div className="card-content">
           <div className="content">
