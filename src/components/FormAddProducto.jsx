@@ -12,7 +12,8 @@ const FormAddProducto = () => {
 
   const saveProduct = async (e) => {
     e.preventDefault();
-    const token = user.token;
+    //const token = user.token;
+    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IlJ1YmVuIERpYXoiLCJpYXQiOjE3NTA1MTc1MzQsImV4cCI6MTc4MjA1MzUzNH0.gibLHEi5aWTOcKrzq-dcfSINkKzyJaN8kgWnwA0gUU0';
     console.log(token);
     try {
       await axios.post("http://54.160.158.246/api/productos", {
