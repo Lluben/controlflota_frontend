@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const FormAddProducto = () => {
   const [nombre, setNombre] = useState("");
   const [precio, setPrecio] = useState("");
   const [msg, setMsg] = useState("");
   const navigate = useNavigate();
+  const { user } = useSelector((state) => state.auth);
 
   const saveProduct = async (e) => {
     e.preventDefault();
-    const token = 'xhsgsrdjskpke';
+    const token = user.token;
     try {
       await axios.post("http://54.160.158.246/api/productos", {
         Nombre: nombre,
